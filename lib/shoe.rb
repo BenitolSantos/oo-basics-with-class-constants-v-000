@@ -10,10 +10,10 @@ class Shoe
 
   def initialize(brand)
     #brands << brand - this is incorrect because in spec BRANDS is being placed
-    if BRANDS.include?(brand)
-      #.include? works better than .find because its an array method rather than an innumerable
-    else
+    if !(BRANDS.include?(brand))
       BRANDS << brand
+      #.include? works better than .find because its an array method 
+      #rather than an innumerable. And BRANDS is an array. 
     end
     @brand = brand
   end
